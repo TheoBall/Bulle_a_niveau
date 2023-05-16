@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Instanciation des variables
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        // setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         bubble = findViewById(R.id.bubble);
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             float z = event.values[2];
             float y = event.values[1];
             gyroscopeValues.setText("Z: " + z + "\nY: " + y);
-            moveBubble(z, y);
+            moveBubble(y, z);
         }
     }
 
